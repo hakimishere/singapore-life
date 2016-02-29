@@ -1,0 +1,104 @@
+table {
+	float: left;
+}
+
+td {
+	text-align: center;
+	height: 80px;
+	width: 140px;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 0px;
+}
+
+div {
+	text-align: right;
+	height: 50px;
+	width: 100px;
+	display: block;
+	margin-left: 30px;
+}
+
+.red {
+	background: #B22222;
+}
+
+.blue {
+	background: #87CEFA;
+}
+
+.pink {
+	background: #FF69B4;	
+}
+
+.orange {
+	background: #FFA500;
+}
+
+.green {
+	background: #98FB98;
+}
+
+.gold {
+	background: #FFD700;
+}
+
+.rspot, .bspot {
+	height: 10px;
+	width: 10px;
+	border-radius: 5px;
+	background: white;
+	margin-left: 5px;
+}
+
+#startred {
+	background: #FF0000;
+}
+
+#startblue {
+	background: #0000FF;
+}
+
+#scoreboard {
+	border: 1px solid black;
+	margin-left: 20px;
+}
+
+#scoreboard tr td {
+	height: 20px;
+	width: 100px;
+	border: 0px;
+	text-align: center;
+}
+
+.player_name {
+	text-align: left;
+}
+
+#redsym, #bluesym {
+	height: 10px;
+	width: 10px;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+}
+
+#redsym {
+	background: #FF0000;
+}
+
+#bluesym {
+	background: #0000FF;
+}
+
+.player_name {
+	height: 40px;
+	width: 70px;
+	margin-left: 5px;
+	float: left;
+}
+
+button {
+	margin-left: 10px;
+}
