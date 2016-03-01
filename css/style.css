@@ -19,6 +19,92 @@ div {
 	margin-left: 30px;
 }
 
+#right {
+	height: 160px;
+	width: 500px;
+	float: left;
+	margin-left: 5px;
+}
+
+#scoreboard {
+	height: 50px;
+	width: 260px;
+	margin: 1px 0 0 0px;
+}
+
+#scoreboard tr td {
+	height: 20px;
+	width: 100px;
+	border: none;
+	text-align: center;
+}
+
+
+#button {
+	/*margin-left: 5px;*/
+	float: left;
+	background: white;
+	border: none;
+	outline: none;
+}
+
+table#windisplay {
+	height: 60px;
+	width: 450px;
+}
+
+#winner {
+	font-size: 40px;
+	/*border: none;*/
+}
+
+#gif {
+	height: 250px;
+	width: 450px;
+	float: right;
+	border: 1px solid black;
+	border-radius: 5px;
+	position: relative;
+	margin-top: 5px;
+	right: 100px;
+}
+
+div.player_name {
+	height: 30px;
+	width: 100px;
+	text-align: left;
+	display: table;
+}
+
+#redsym, #bluesym {
+	height: 10px;
+	width: 10px;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 5px;
+	float: left;
+}
+
+#redsym {
+	background: #FF0000;
+}
+
+#bluesym {
+	background: #0000FF;
+}
+
+.player_name {
+	height: 40px;
+	width: 70px;
+	margin-left: 5px;
+	float: left;
+}
+
+td#red_score, td#blue_score {
+	width: 90px;
+	text-align: center;
+}
+
 .red {
 	background: #B22222;
 }
@@ -51,54 +137,10 @@ div {
 	margin-left: 5px;
 }
 
-#startred {
+#red {
 	background: #FF0000;
 }
 
-#startblue {
+#blue {
 	background: #0000FF;
-}
-
-#scoreboard {
-	border: 1px solid black;
-	margin-left: 20px;
-}
-
-#scoreboard tr td {
-	height: 20px;
-	width: 100px;
-	border: 0px;
-	text-align: center;
-}
-
-.player_name {
-	text-align: left;
-}
-
-#redsym, #bluesym {
-	height: 10px;
-	width: 10px;
-	border-radius: 5px;
-	margin-left: 10px;
-	margin-top: 10px;
-	float: left;
-}
-
-#redsym {
-	background: #FF0000;
-}
-
-#bluesym {
-	background: #0000FF;
-}
-
-.player_name {
-	height: 40px;
-	width: 70px;
-	margin-left: 5px;
-	float: left;
-}
-
-button {
-	margin-left: 10px;
 }
