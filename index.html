@@ -4,14 +4,15 @@
 		<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Singapore Life</title>
-		<!-- <link href='https://fonts.googleapis.com/css?family=Raleway:300,200' rel='stylesheet' type='text/css'> -->
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+		<link href='https://fonts.googleapis.com/css?family=Raleway:300,200' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style.css"/>
 	</head>
 	<body>
-		<header>Singapore Life</header>
-		<p id="intro">Disclaimer: All characters appearing in this game are fictitious. Any resemblance to real persons, living or dead, is purely coincidental. All references have been preselected to cover the whole gamut of age groups, including said unknown. By being audience to the game, you tacitly agree to be unperturbed nor offended by the material presented. All depictions are in no way suggestive or to be used to cast allusions to creator's metrosexuality. You are highly advised to leave the room. Consider yourself warned! Enjoy! </p>
-		<p id="playerturn">It is Red's turn. Round: 1.</p>
+		<header><h1><i class="fa fa-male" id="guy"></i><i class="fa fa-female" id="babe"></i><i class="fa fa-child" id="child"></i><i class="fa fa-heart" id="love"></i>Singapore Life<i class="fa fa-money" id="money"></i><i class="fa fa-building-o" id="home"></i><i class="fa fa-car" id="car"></i><i class="fa fa-smile-o" id="happy"></i></h1>
+		<p id="intro">Disclaimer: All characters appearing in this game are fictitious. Any resemblance to real persons, living or dead, is purely coincidental. All references have been pre-selected to cover the whole gamut of age groups, including said unknownJ (camelCase). By being audience to the game, you tacitly agree to be unperturbed nor offended by the material presented. All depictions are in no way suggestive or to be used to cast allusions to anyone's metrosexuality. You are highly advised to leave the room. Consider yourself warned! Try to enjoy! </p>
+		<p id="playerturn">It is <span id="playercolor">Red</span>'s turn. Round: 1.</p>
+		</header>
 		<table id="gameboard">
 			<tr id="row1">
 				<td id="S1" class="gold">
@@ -192,7 +193,7 @@
 				</tr>
 			</table>
 			<button id="button"><img id="die"src="images/d1.gif" name="mydice"></button>
-			<button id="restart">Restart</button>
+			<button id="rewind">Rewind</button>
 			<table id="windisplay">
 				<tr>
 					<td id="winner"></td>
