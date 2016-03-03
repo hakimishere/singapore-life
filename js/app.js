@@ -31,15 +31,15 @@ function Game(Player) {
       }
     };
 
-    var eventSwitch = function (player) {
+    var eventSwitch = function (player) { //Events that will activate if either player lands on a space.
         switch(player.currentPosition) {
             case 1:
                 console.log("Start");
                 break;
-            case 2:
-                player.money -= 5000;
-                $('#'+player.color+'_score').text("$ "+player.money);
-                $('#gif').attr("src", "images/birth.gif");
+            case 2: //When a player lands on space 2...
+                player.money -= 5000; //Alters a player's money balance.
+                $('#'+player.color+'_score').text("$ "+player.money); //Replaces the money figure on the scoreboard for player landing on space.
+                $('#gif').attr("src", "images/birth.gif"); //Produces the respective gif for the space within the 'movie screen'
                 break;
             case 3:
                 player.money += 4000;
@@ -184,7 +184,7 @@ function Game(Player) {
             }
           };
 
-    var retirement = function (player1, player2) {
+    var retirement = function (player1, player2) { //Events activated when the first player to retire takes her turn.
         if(player1.currentPosition>=30 && player2.currentPosition<30 && player1.previousPosition===30) {
             switch(roll) {
                 case 1:
@@ -217,36 +217,36 @@ function Game(Player) {
       }
     };
 
-    var switchPlayer = function (player) {
-      if (round%2===0) {
-          currentPlayer = playerRed;
+    var switchPlayer = function (player) { //Switches player each round.
+      if (round%2===0) { //Blue takes turn on even rounds
+          currentPlayer = playerRed; //When Blue's turn is over, switch playerRed to currentPlayer.
           previousPlayer = playerBlue;
       }
-      else {
-          currentPlayer = playerBlue;
+      else { //Blue takes turn on odd rounds
+          currentPlayer = playerBlue; //When Blue's turn is over, switch playerBlue to currentPlayer.
           previousPlayer = playerRed;
       }
       round++;
-      $('#playerturn').html("It is <span id='playercolor'>"+currentPlayer.color+"</span>'s turn. Round: "+round+".");
+      $('#playerturn').html("It is <span id='playercolor'>"+currentPlayer.color+"</span>'s turn. Round: "+round+"."); //
       $('#playercolor').css("color", currentPlayer.color);
     };
 
     var checkEndGame = function(player1, player2) {
-        if(player1.currentPosition === 30 && player2.currentPosition === 30) {
-            if (player1.money>player2.money) {
+        if(player1.currentPosition === 30 && player2.currentPosition === 30) { //When both players have retired i.e. landed on Retirement space...
+            if (player1.money>player2.money) { //When playerRed has more money than playerBlue at end.
               $('#winner').css("color", player1.color).text(player1.color+" Wins!");
               $('#winner').fadeOut(3000).fadeIn(3000).fadeOut(3000).fadeIn(3000);
               $('#gif').attr("src", "images/winred.gif");
               $('#die').off('click', this.play);
             }
-            else if (player1.money<player2.money) {
+            else if (player1.money<player2.money) { //When playerBlue has more money than playerRed at end.
               $('#winner').css("color", player2.color).text(player2.color+" Wins!");
               $('#winner').fadeOut(3000).fadeIn(3000).fadeOut(3000).fadeIn(3000);
-              $('#gif').attr("src", "images/winblue.gif");
+              $('#gif').attr("src", "images/winblue.gif"); //Plays blue celebration gif within 'movie screen'
               $('#die').off('click', this.play);
             }
             else {
-              $('#winner').css("color", "gold").text("Everybody's A Winner!");
+              $('#winner').css("color", "gold").text("Everybody's A Winner!"); //When both players have the same amount of money in the end.
               $('#winner').fadeOut(3000).fadeIn(3000).fadeOut(3000).fadeIn(3000);
               $('#gif').attr("src", "images/wineveryone.gif");
               $('#die').off('click', this.play);
@@ -254,7 +254,7 @@ function Game(Player) {
         }
     };
 
-    this.clickEventListener = function () {
+    this.clickEventListener = function () { //Function calling functions in the correct sequence of play.
         $('#die').on('click', function () {
           rolldie();
           moveToken(currentPlayer);
